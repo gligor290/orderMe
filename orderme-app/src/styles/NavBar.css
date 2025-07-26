@@ -1,7 +1,16 @@
+:root {
+    --mono-base: #337353;
+    --mono-light: #4fa37a;
+    --mono-lighter: #b2d8c5;
+    --mono-dark: #24523b;
+    --mono-darker: #183a28;
+    --mono-white: #fff;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
-    background: #fff;
+    background: var(--mono-lighter);
     padding: 0.5rem 2rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     position: sticky;
@@ -87,4 +96,31 @@
 .center-vertically {
     display: flex;
     align-items: center;
+}
+
+@media (max-width: 768px) {
+    .menu-page {
+        display: none;
+    }
+
+    .menu-page.open {
+        display: block;
+        position: absolute;
+        top: 60px; /* below the navbar */
+        left: 0;
+        right: 0;
+        background: var(--mono-lighter);
+        z-index: 999;
+        padding: 1rem;
+    }
+
+    .menu-quick-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .dropdown-menu {
+        margin-top: 1rem;
+    }
 }
