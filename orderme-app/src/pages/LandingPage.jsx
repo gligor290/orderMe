@@ -12,9 +12,10 @@ function LandingPage() {
         localStorage.setItem("tableId", tableId);
         navigate("/menu");
     };
+
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center p-4">
-            <h1 className="text-2xl font-bold mb-4">🍽️ Welcome to OrderMe</h1>
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
+            <h1 className="text-2xl font-bold mb-4">🍽️ Welcome too OrderMe</h1>
             <p className="mb-6">You’re sitting at <strong>Table #{tableId}</strong></p>
             <TableSessionSetup
                 guestName={guestName}
